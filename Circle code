@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/hapul/1/edit
+-->
+<head>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+
+<script>
+var width= 400;
+var height= 400;
+
+var karina= Raphael (0,0,height,width);
+
+var t = karina.circle(23,200,22);
+
+function cont(){
+t.animate({cx:200,cy:400-22},1000,up);
+}
+
+function up(){
+t.animate({cx:400-23,cy:200},1000,upp);
+}
+
+function upp(){
+  t.animate({cx:200,cy:23},1000,beginning);
+}
+
+function beginning(){
+  t.animate({cx:23,cy:200},1000,cont);
+}
+cont();
+</script>
+</body>
+</html>
